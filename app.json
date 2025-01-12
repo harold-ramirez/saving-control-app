@@ -6,6 +6,7 @@
     "orientation": "portrait",
     "icon": "./assets/Splash_Logo.png",
     "userInterfaceStyle": "light",
+    "scheme": "saving-control",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",

@@ -1,4 +1,5 @@
 import "../global.css";
+import { Link } from "expo-router";
 import { Text, View, Image, Pressable, FlatList } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
@@ -105,6 +106,9 @@ export default function Main() {
           <Text className="text-white text-2xl">DIARIO</Text>
         </Pressable>
       </View>
+      <Link href="/newSavingControl" className="bg-purple-400 text-xl">
+        Crear nuevo control de ahorro
+      </Link>
       <Text className="my-2 font-bold text-2xl">Tus avances:</Text>
       <Text className="text-xl">Días con ahorros registrados: 27/30</Text>
       <Text className="text-xl mb-2">
