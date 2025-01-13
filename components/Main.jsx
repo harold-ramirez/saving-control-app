@@ -5,6 +5,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 
 import logo from "../assets/Splash_Logo.png";
+import { MoneyBillIcon } from "./Icons";
 
 export default function Main() {
   const insets = useSafeAreaInsets();
@@ -106,8 +107,11 @@ export default function Main() {
           <Text className="text-white text-2xl">DIARIO</Text>
         </Pressable>
       </View>
-      <Link href="/newSavingControl" className="bg-purple-400 text-xl">
-        Crear nuevo control de ahorro
+      <Link asChild href="/newSavingControl">
+        <Pressable className="bg-purple-400 flex-row gap-2 items-center justify-center active:bg-purple-700">
+          <MoneyBillIcon size={32} />
+          <Text className="text-xl">Crear nuevo control de ahorro</Text>
+        </Pressable>
       </Link>
       <Text className="my-2 font-bold text-2xl">Tus avances:</Text>
       <Text className="text-xl">Días con ahorros registrados: 27/30</Text>
