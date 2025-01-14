@@ -1,14 +1,12 @@
-import "../global.css";
 import { Link } from "expo-router";
 import { Text, View, Image, Pressable, FlatList } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 
 import logo from "../assets/Splash_Logo.png";
 import { MoneyBillIcon } from "./Icons";
+import { Screen } from "./Screen";
 
 export default function Main() {
-  const insets = useSafeAreaInsets();
   const objects = [
     {
       name: "Casa",
@@ -78,17 +76,8 @@ export default function Main() {
   }
 
   return (
-    <View
-      style={{
-        paddingTop: insets.top,
-        paddingBottom: insets.bottom,
-      }}
-      className="px-3 flex-1"
-    >
+    <Screen>
       <View className="items-center">
-        <Text className="font-bold text-2xl text-white py-5">
-          BIENVENIDO A TU APP DE AHORRO
-        </Text>
         <Image
           source={logo}
           style={{ width: 100, height: 100 }}
@@ -128,6 +117,6 @@ export default function Main() {
           renderItem={renderItem}
         />
       </LinearGradient>
-    </View>
+    </Screen>
   );
 }
